@@ -1,0 +1,72 @@
+<div (click)="instance.close()" class="backdrop"></div>
+
+<div #wrapper
+     @slideDownUp
+     class="wrapper"
+     [attr.name]="instance.config.name"
+     [class.shadow-left]="instance.config.position === 'left'"
+     [class.shadow-right]="instance.config.position === 'right'"
+     [style.width]="instance.config.width"
+     [style.background-color]="instance.config.theme.backgroundColor"
+     [style.left]="instance.config.position === 'left' ? '0' : null"
+     [style.right]="instance.config.position === 'right' ? '0' : null">
+
+    <div class="top">
+
+        <div *ngIf="instance.config.title"
+             [style.color]="instance.config.theme.title.color"
+             class="left">
+
+            {{ instance.config.title }}
+
+        </div>
+
+        <div class="right">
+
+            <svg [attr.fill]="instance.config.theme.close.color"
+                 [style.font-size]="instance.config.theme.close.fontSize"
+                 (click)="instance.close()"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24" stroke="currentColor">
+
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+    <div class="center">
+
+        <div class="center"
+             #center></div>
+
+    </div>
+
+    <div class="bottom"
+         [style.justify-content]="instance.config.theme.buttons.alignment">
+
+        <button *ngIf="instance.config.buttons.apply?.show"
+                (click)="onApplyClick()"
+                [style.background]="instance.config.theme.buttons.apply.backgroundColor"
+                [style.border-color]="instance.config.theme.buttons.apply.borderColor"
+                [style.color]="instance.config.theme.buttons.apply.color">
+
+            {{ instance.config.buttons.apply.label || 'APPLY' }}
+
+        </button>
+
+        <button *ngIf="instance.config.buttons.reset?.show"
+                (click)="onResetClick()"
+                [style.background]="instance.config.theme.buttons.reset.backgroundColor"
+                [style.border-color]="instance.config.theme.buttons.reset.borderColor"
+                [style.color]="instance.config.theme.buttons.reset.color">
+
+            {{ instance.config.buttons.reset.label || 'RESET' }}
+
+        </button>
+
+    </div>
+
+</div>

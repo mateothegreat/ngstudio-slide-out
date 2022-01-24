@@ -127,6 +127,37 @@
           }
         }
       }
+    },
+    "slide-out": {
+      "projectType": "library",
+      "root": "projects/slide-out",
+      "sourceRoot": "projects/slide-out/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/slide-out/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/slide-out/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/slide-out/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/slide-out/src/test.ts",
+            "tsConfig": "projects/slide-out/tsconfig.spec.json",
+            "karmaConfig": "projects/slide-out/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngstudio-slide-out"
