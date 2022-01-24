@@ -4,6 +4,7 @@ import { SlideOutService } from '../../projects/slide-out/src/lib/slide-out.serv
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { SlideOutClickEvent } from '../../projects/slide-out/src/lib/slide-out-click-event';
+import { ThreeComponent } from './three/three.component';
 
 @Component({
     selector: 'app-root',
@@ -68,7 +69,7 @@ export class AppComponent {
 
                 const instance3 = slideOutService.open('three', {
 
-                    componentType: TwoComponent,
+                    componentType: ThreeComponent,
                     position: SlideOutPosition.LEFT,
                     theme: {
 

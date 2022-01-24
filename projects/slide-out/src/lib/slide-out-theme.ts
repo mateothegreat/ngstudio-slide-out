@@ -4,6 +4,13 @@ export class SlideOutTheme {
 
     public backgroundColor?: string;
 
+    public collapse?: {
+
+        color?: string,
+        fontSize?: string
+
+    };
+
     public title?: {
 
         color?: string,

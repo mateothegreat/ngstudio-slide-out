@@ -7,6 +7,12 @@ export const SlideOutThemes = {
 
         backgroundColor: '#222',
 
+        collapse: {
+
+            color: '#fff',
+            fontSize: '20px'
+
+        },
         title: {
 
             color: '#aaa'

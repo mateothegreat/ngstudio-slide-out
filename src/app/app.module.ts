@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { SlideOutModule } from '../../projects/slide-out/src/lib/slide-out.module';
+import { ThreeComponent } from './three/three.component';
 
 @NgModule({
 
@@ -12,7 +13,8 @@ import { SlideOutModule } from '../../projects/slide-out/src/lib/slide-out.modul
 
         AppComponent,
         OneComponent,
-        TwoComponent
+        TwoComponent,
+        ThreeComponent
 
     ],
 
